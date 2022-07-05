@@ -17,3 +17,5 @@ Cmder：Windows下命令行利器
 MyWebServer：windows下简单的web服务器
 
 pxCook: 图片标注利器，可生成代码
+
+inkscape: SVG编辑器
