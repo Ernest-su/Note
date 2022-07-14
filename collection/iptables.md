@@ -1,5 +1,12 @@
- 
-  iptables -t nat -A PREROUTING -p udp --dport 123 -j DNAT --to 192.168.1.129:1234  
+开启转发功能
+vim /etc/sysctl.conf
+
+输入net.ipv4.ip_forward=1
+
+使用命令sysctl -p使配置生效 
+
+
+iptables -t nat -A PREROUTING -p udp --dport 123 -j DNAT --to 192.168.1.129:1234  
  
 查看本机上有哪些已经配置好的iptables规则(如第三条就是我们使用上面命令添加的一条规则)
  iptables -t nat -xnvL PREROUTING   
